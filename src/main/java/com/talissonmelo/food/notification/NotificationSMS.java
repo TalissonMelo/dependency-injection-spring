@@ -1,9 +1,11 @@
 package com.talissonmelo.food.notification;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import com.talissonmelo.food.model.Client;
 
+@Primary
 @Component
 public class NotificationSMS implements Notification {
 

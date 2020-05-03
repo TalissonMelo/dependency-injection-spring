@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 import com.talissonmelo.food.model.Client;
 
+//@Primary
 @Component
 public class NotificationEmail implements Notification {
 
