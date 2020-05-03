@@ -15,8 +15,6 @@ public class OneController {
 
 	public OneController(ActivateClientService client) {
 		this.client = client;
-		
-		System.out.println("Meu Controller: " + client);
 	}
 
 	@GetMapping
