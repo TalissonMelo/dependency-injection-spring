@@ -1,4 +1,4 @@
-package com.talissonmelo.food.notification;
+package com.talissonmelo.food.notification.anotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.talissonmelo.food.model.Client;
 import com.talissonmelo.food.notification.Notification;
-import com.talissonmelo.food.notification.TypeNotification;
+import com.talissonmelo.food.notification.anotation.TypeNotification;
 import com.talissonmelo.food.notification.enums.TypeUrgency;
 
 @Component

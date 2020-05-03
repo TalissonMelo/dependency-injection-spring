@@ -1,8 +1,10 @@
-package com.talissonmelo.food.notification;
+package com.talissonmelo.food.notification.sms;
 
 import org.springframework.stereotype.Component;
 
 import com.talissonmelo.food.model.Client;
+import com.talissonmelo.food.notification.Notification;
+import com.talissonmelo.food.notification.anotation.TypeNotification;
 import com.talissonmelo.food.notification.enums.TypeUrgency;
 
 @TypeNotification(TypeUrgency.URGENT)
