@@ -1,10 +1,11 @@
 package com.talissonmelo.food.notification;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.talissonmelo.food.model.Client;
 
-//@Primary
+@Qualifier("email")
 @Component
 public class NotificationEmail implements Notification {
 

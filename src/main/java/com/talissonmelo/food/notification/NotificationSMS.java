@@ -1,11 +1,11 @@
 package com.talissonmelo.food.notification;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.talissonmelo.food.model.Client;
 
-@Primary
+@Qualifier("sms")
 @Component
 public class NotificationSMS implements Notification {
 
