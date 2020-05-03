@@ -1,16 +1,17 @@
 package com.talissonmelo.food.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.talissonmelo.food.model.Client;
 import com.talissonmelo.food.notification.Notification;
+import com.talissonmelo.food.notification.TypeNotification;
+import com.talissonmelo.food.notification.enums.TypeUrgency;
 
 @Component
 public class ActivateClientService {
 
-	@Qualifier("email")
+	@TypeNotification(TypeUrgency.NOT_URGENT)
 	@Autowired
 	private Notification notification;
 

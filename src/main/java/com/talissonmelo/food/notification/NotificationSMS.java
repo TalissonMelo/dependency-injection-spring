@@ -1,11 +1,11 @@
 package com.talissonmelo.food.notification;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.talissonmelo.food.model.Client;
+import com.talissonmelo.food.notification.enums.TypeUrgency;
 
-@Qualifier("sms")
+@TypeNotification(TypeUrgency.URGENT)
 @Component
 public class NotificationSMS implements Notification {
 
