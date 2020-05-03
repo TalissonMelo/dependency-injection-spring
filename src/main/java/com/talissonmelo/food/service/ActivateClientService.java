@@ -1,5 +1,7 @@
 package com.talissonmelo.food.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -9,16 +11,14 @@ import com.talissonmelo.food.notification.Notification;
 @Component
 public class ActivateClientService {
 
-	@Autowired(required = false)
-	private Notification notification;
+	@Autowired
+	private List<Notification> notification;
 
 	public void activate(Client client) {
 		client.setStatus();
 
-		if (notification != null) {
-			this.notification.notification(client, "Cadastro no sistema est� ativo!.");
-		}else {
-			System.out.println("Não existe notificador, mas cliente foi ativado.");
+		for (Notification notification : notification) {
+			notification.notification(client, "Cadastro no sistema est� ativo!.");
 		}
 	}
 }
