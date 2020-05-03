@@ -1,11 +1,8 @@
 package com.talissonmelo.food.service;
 
-import org.springframework.stereotype.Component;
-
 import com.talissonmelo.food.model.Client;
 import com.talissonmelo.food.notification.Notification;
 
-@Component
 public class ActivateClientService {
 
 	private Notification notification;
