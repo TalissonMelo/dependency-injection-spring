@@ -9,25 +9,16 @@ import com.talissonmelo.food.notification.Notification;
 @Component
 public class ActivateClientService {
 
-	@Autowired
+	@Autowired(required = false)
 	private Notification notification;
-
-//	@Autowired
-//	public ActivateClientService(Notification notification) {
-//		this.notification = notification;
-//	}
-
-//	public ActivateClientService(String notification) {
-//	 }
 
 	public void activate(Client client) {
 		client.setStatus();
 
-		this.notification.notification(client, "Cadastro no sistema est� ativo!.");
+		if (notification != null) {
+			this.notification.notification(client, "Cadastro no sistema est� ativo!.");
+		}else {
+			System.out.println("Não existe notificador, mas cliente foi ativado.");
+		}
 	}
-
-//	@Autowired
-//	public void setNotification(Notification notification) {
-//		this.notification = notification;
-//	}
 }
