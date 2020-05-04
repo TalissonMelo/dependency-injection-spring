@@ -12,10 +12,6 @@ import com.talissonmelo.food.notification.enums.TypeUrgency;
 @TypeNotification(TypeUrgency.NOT_URGENT)
 @Component
 public class NotificationEmail implements Notification {
-
-	public NotificationEmail() {
-		System.out.println("Notificador Email...");
-	}
 	
 	@Override
 	public void notification(Client client, String msg) {
