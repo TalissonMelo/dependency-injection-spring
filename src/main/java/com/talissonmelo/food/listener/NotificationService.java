@@ -12,7 +12,7 @@ import com.talissonmelo.food.service.ActivateClientEvent;
 @Component
 public class NotificationService {
 	
-	@TypeNotification(value = TypeUrgency.NOT_URGENT)
+	@TypeNotification(value = TypeUrgency.URGENT)
 	@Autowired
 	private Notification notification;
 
