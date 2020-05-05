@@ -1,10 +1,11 @@
 package com.talissonmelo.food.notification.sms;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.talissonmelo.food.model.Client;
 import com.talissonmelo.food.notification.Notification;
+import com.talissonmelo.food.notification.NotificationProperties;
 import com.talissonmelo.food.notification.anotation.TypeNotification;
 import com.talissonmelo.food.notification.enums.TypeUrgency;
 
@@ -12,16 +13,13 @@ import com.talissonmelo.food.notification.enums.TypeUrgency;
 @Component
 public class NotificationSMS implements Notification {
 	
-	@Value("${notification.email.host-servidor}")
-	private String host;
-	
-	@Value("${notification.email.port-servidor}")
-	private Integer port;
+	@Autowired
+	private NotificationProperties properties;
 
 	@Override
 	public void notification(Client client, String msg) {
-		System.out.println("ROST : " + this.host);
-		System.out.println("PORT : " + this.port);
+		System.out.println("HOST : " + properties.getHostServidor());
+		System.out.println("PORT : " + properties.getPortServidor());
 		
 		System.out.println("Notificando : " 
 						+ client.getName() 
